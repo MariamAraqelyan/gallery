@@ -5,6 +5,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { RouterTestingModule } from '@angular/router/testing';
 import { FormsModule } from '@angular/forms'
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('DetailsService', () => {
   let service: DetailsService;
@@ -16,8 +17,9 @@ describe('DetailsService', () => {
               RouterTestingModule,
               FormsModule,
               ReactiveFormsModule,
+              HttpClientTestingModule
           ],
-       providers:[HttpClient]
+       providers:[HttpClient, DetailsService]
     });
     service = TestBed.inject(DetailsService);
   });
