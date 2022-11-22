@@ -1,0 +1,26 @@
+<!--<h4 *ngIf="error" class="errorMsg">Fail to retreive a list of images</h4>-->
+
+<!--<div *ngIf="loading" class="loadingCenter">-->
+<!--  <div class="loader"></div>-->
+<!--</div>-->
+
+
+<div>
+  <mat-grid-list cols="4" rowHeight="300px" gutterSize="40px">
+    <mat-grid-tile
+      *ngFor="let photo of images">
+      <mat-card class="my-card" fxFill>
+        <mat-card-title>{{photo?.author}}</mat-card-title>
+        <mat-card-content class="my-card-content">
+          <div
+            class="gallery-item"
+            [ngStyle]="{'background-image': 'url(' + photo.download_url + ')'}"
+            (click)="imgDetails(photo)"></div>
+        </mat-card-content>
+        <mat-card-footer>
+          dasdjhkjhk
+        </mat-card-footer>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

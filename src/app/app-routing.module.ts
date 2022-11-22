@@ -3,18 +3,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-//   { path: 'home', component: HomeComponent },
-//   { path: 'detail', redirectTo: 'home' },
+  { path: '', redirectTo: 'gallery', pathMatch: 'full' },
+  {
+      path: 'gallery',
+      loadChildren: () => import('../app/photo-gallery/photo-gallery.module').then(m => m.PhotoGalleryModule),
+  },
+  { path: 'detail', redirectTo: 'gallery' },
 //   {
 //     path: 'detail/:id',
 //     canActivate: [RouteGuard],
 //     loadChildren: () =>
 //       import('../app/details-module/details-module.module').then((m) => m.DetailsModuleModule),
 //   },
-//   {path: 'page/:page', component: GalleryComponent},
-//   {path: '', redirectTo:'page/1', pathMatch: 'full'},
-//   {path: 'image/:id', component: ImageInfoComponent},
   {path: 'unknown', component: PageNotFoundComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
