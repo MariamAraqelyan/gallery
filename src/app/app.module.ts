@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { NavComponent } from './components/nav/nav.component';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
@@ -19,7 +18,6 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    NavComponent
   ],
   imports: [
     BrowserModule,
