@@ -37,8 +37,9 @@ export class PhotoGalleryComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(private photoService: PhotoGalleryService, private router: Router, private ngZone: NgZone,) {}
 
   ngOnInit(): void {
-    this.isMobile = window.innerWidth <= 576;
-    this.loadMore();
+//       this.images = [];
+this.isMobile = window.innerWidth <= 576;
+this.loadMore();
   }
 
     ngAfterViewInit() {
