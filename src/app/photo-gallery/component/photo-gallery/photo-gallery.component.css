@@ -1,6 +1,7 @@
 .my-card {
   height: -webkit-fill-available;
   width: 100%;
+  border-radius: unset;
 }
 
 .my-card-content {

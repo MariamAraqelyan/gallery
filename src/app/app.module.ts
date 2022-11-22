@@ -12,6 +12,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { ApiService } from './helper/service/api.service';
+import { RouteGuard } from './helper/guard/route.guard';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { ApiService } from './helper/service/api.service';
     MatCardModule,
     MatButtonModule
   ],
-  providers: [ApiService],
+  providers: [ApiService, RouteGuard],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   bootstrap: [AppComponent]
 })
