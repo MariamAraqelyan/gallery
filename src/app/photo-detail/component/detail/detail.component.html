@@ -1,1 +1,46 @@
-<p>detail works!</p>
+<!--<h2 class="header">Image Detail</h2>-->
+<!--<h4 *ngIf="error" class="errorMsg">Fail to retreive image details</h4>-->
+
+<!--<div *ngIf="loading" class="loadingCenter">-->
+<!--  <div class="loader"></div>-->
+<!--</div>-->
+
+<!--<ul class="breadcrumb">-->
+<!--  <li><a [routerLink]="['/home']">Home</a></li>-->
+<!--  <li>Details</li>-->
+<!--</ul>-->
+
+<!--<div *ngIf="!loading">-->
+<!--  <div class="row">-->
+<!--    <div class="column">-->
+<!--      <h4 *ngIf="imgLoading" class="loadingMsg">Loading images</h4>-->
+<!--      <img src="{{photoDetail.download_url}}" class="imageSize" id="img-id"-->
+<!--           (load)='onLoad($event)'>-->
+<!--    </div>-->
+<!--    <div class="column leftColumn">-->
+<!--      <p>Author: {{photoDetail.author}}</p>-->
+<!--      <p>Width: {{photoDetail.width}}</p>-->
+<!--      <p>Height: {{photoDetail.height}}</p>-->
+
+<!--      <p><button class="button" (click)="downloadImage(photoDetail)">Download Image</button></p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<div class="container">
+  <mat-card class="my-card" fxFill>
+    <mat-card-title>
+      <div class="title-container">
+        {{photoDetail?.author}}
+        <div>
+          <button *ngIf="isDownLoad" class="btn-bg" mat-flat-button (click)="downloadImage(photoDetail)">Download</button>
+          <button class="btn-bg" [routerLink]="['/gallery']">Back</button>
+        </div>
+      </div>
+    </mat-card-title>
+    <mat-card-content class="my-card-content">
+      <img src="{{photoDetail?.download_url}}" class="imageSize" id="img-id"
+           (load)='onLoad($event)'>
+    </mat-card-content>
+  </mat-card>
+</div>

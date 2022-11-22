@@ -9,7 +9,6 @@ const routes: Routes = [
       path: 'gallery',
       loadChildren: () => import('../app/photo-gallery/photo-gallery.module').then(m => m.PhotoGalleryModule),
   },
-  { path: 'detail', redirectTo: 'gallery' },
   {
       path: 'detail/:id',
       canActivate: [RouteGuard],

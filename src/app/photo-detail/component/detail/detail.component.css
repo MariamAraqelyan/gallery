@@ -1,0 +1,30 @@
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.my-card {
+  background: #b0b0b04a;
+  height: 98vh;
+  padding: 0;
+  margin: 0;
+  box-sizing: unset;
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.my-card-content {
+    width: 98%;
+    margin: 0 auto;
+    height: calc(100% - 100px);
+}
+
+.btn-bg {
+  background: transparent;
+  border: none;
+  cursor:pointer;
+}
