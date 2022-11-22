@@ -18,5 +18,9 @@
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>
+    <mat-grid-tile *ngIf="!errorMsg; else isError"></mat-grid-tile>
+      <ng-template #isError>
+        <div class="error">{{ errorMsg }}</div>
+      </ng-template>
 
 </cdk-virtual-scroll-viewport>
