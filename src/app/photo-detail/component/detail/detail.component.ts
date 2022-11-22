@@ -17,7 +17,6 @@ export class DetailComponent implements OnInit, OnDestroy {
     downloadImgSub: any;
     error = false;
 
-    currentPage = 1;
     public photoDetail;
     loading = true;
     imgLoading = true;

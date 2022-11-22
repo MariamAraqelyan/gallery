@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PhotoDetailRoutingModule } from './photo-detail-routing.module';
 import { DetailComponent } from './component/detail/detail.component'
 import {MatCardModule} from '@angular/material/card';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import {MatCardModule} from '@angular/material/card';
   imports: [
     CommonModule,
     PhotoDetailRoutingModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressSpinnerModule
   ],
 })
 export class PhotoDetailModule { }
