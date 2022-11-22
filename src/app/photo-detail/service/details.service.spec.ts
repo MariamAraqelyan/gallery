@@ -1,12 +1,24 @@
 import { TestBed } from '@angular/core/testing';
 
 import { DetailsService } from './details.service';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { RouterTestingModule } from '@angular/router/testing';
+import { FormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('DetailsService', () => {
   let service: DetailsService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+       imports: [
+              HttpClientModule,
+              RouterTestingModule,
+              FormsModule,
+              ReactiveFormsModule,
+          ],
+       providers:[HttpClient]
+    });
     service = TestBed.inject(DetailsService);
   });
 
