@@ -13,6 +13,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { ApiService } from './helper/service/api.service';
 import { RouteGuard } from './helper/guard/route.guard';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { RouteGuard } from './helper/guard/route.guard';
     MatIconModule,
     MatMenuModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    ScrollingModule
   ],
   providers: [ApiService, RouteGuard],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],

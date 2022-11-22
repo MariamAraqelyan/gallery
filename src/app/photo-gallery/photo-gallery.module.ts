@@ -4,6 +4,7 @@ import { PhotoGalleryComponent } from './component/photo-gallery/photo-gallery.c
 import { PhotoGalleryRoutingModule } from './photo-gallery-routing.module';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import {MatCardModule} from '@angular/material/card';
     CommonModule,
     PhotoGalleryRoutingModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    ScrollingModule
   ],
   exports: [PhotoGalleryComponent],
 })

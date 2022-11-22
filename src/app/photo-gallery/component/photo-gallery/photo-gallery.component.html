@@ -4,8 +4,9 @@
 <!--  <div class="loader"></div>-->
 <!--</div>-->
 
-
-<div>
+<cdk-virtual-scroll-viewport
+  #scroller
+  [itemSize]="300">
   <mat-grid-list cols="4" rowHeight="300px" gutterSize="40px">
     <mat-grid-tile
       *ngFor="let photo of images">
@@ -18,9 +19,10 @@
             (click)="imgDetails(photo)"></div>
         </mat-card-content>
         <mat-card-footer>
-            <button mat-button>Download</button>
+          <button mat-button>Download</button>
         </mat-card-footer>
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>
-</div>
+
+</cdk-virtual-scroll-viewport>
