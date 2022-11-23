@@ -23,7 +23,7 @@ export class PhotoGalleryComponent extends PhotoProcessesComponent implements On
 
   private subscription: any;
   images = new Array<PhotoDetail>();
-  isMobile = true;
+  isMobile = true; //Mobile design will continue to decide a little later
   errorMsg = '';
   isLoading = false;
 

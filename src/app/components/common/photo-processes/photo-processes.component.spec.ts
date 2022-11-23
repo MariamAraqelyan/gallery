@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PhotoProcessesComponent } from './photo-processes.component';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
 
 describe('PhotoProcessesComponent', () => {
   let component: PhotoProcessesComponent;
@@ -8,7 +9,8 @@ describe('PhotoProcessesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PhotoProcessesComponent ]
+      declarations: [ PhotoProcessesComponent ],
+      imports: [HttpClientTestingModule]
     })
     .compileComponents();
 
