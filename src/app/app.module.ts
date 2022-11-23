@@ -13,11 +13,13 @@ import {MatButtonModule} from '@angular/material/button';
 import { ApiService } from './helper/service/api.service';
 import { RouteGuard } from './helper/guard/route.guard';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { PhotoProcessesComponent } from './components/common/photo-processes/photo-processes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
+    PhotoProcessesComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,8 @@ import { of } from 'rxjs';
 import { catchError, filter, finalize, map, pairwise, throttleTime } from 'rxjs/operators';
 
 import { PhotoInfo } from 'src/app/helper/enum/photoInfo';
+import { ApiService } from 'src/app/helper/service/api.service';
+import { PhotoProcessesComponent } from 'src/app/components/common/photo-processes/photo-processes.component';
 
 @Component({
   selector: 'app-photo-gallery',
@@ -17,7 +19,7 @@ import { PhotoInfo } from 'src/app/helper/enum/photoInfo';
       '(window:resize)': 'onResize($event)'
     }
 })
-export class PhotoGalleryComponent implements OnInit, AfterViewInit, OnDestroy {
+export class PhotoGalleryComponent extends PhotoProcessesComponent implements OnInit, AfterViewInit, OnDestroy {
 
   private subscription: any;
   images = new Array<PhotoDetail>();
@@ -29,7 +31,9 @@ export class PhotoGalleryComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('scroller') scroller!: CdkVirtualScrollViewport;
   public pageNumber: number = PhotoInfo.LOADINGPAGENUMBER;
 
-  constructor(private photoService: PhotoGalleryService, private router: Router, private ngZone: NgZone,) {}
+  constructor(private photoService: PhotoGalleryService, private router: Router, private ngZone: NgZone, public apiService: ApiService) {
+      super(apiService);
+  }
 
   ngOnInit(): void {
     this.isMobile = window.innerWidth <= 576;

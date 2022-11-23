@@ -22,9 +22,3 @@ img {
     margin: 0 auto;
     height: calc(100% - 100px);
 }
-
-.btn-bg {
-  background: transparent;
-  border: none;
-  cursor:pointer;
-}
