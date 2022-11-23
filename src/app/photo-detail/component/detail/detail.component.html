@@ -9,7 +9,7 @@
         {{photoDetail?.author}}
         <div>
           <button *ngIf="isDownLoad" class="btn-bg" mat-flat-button (click)="downloadImage(photoDetail)">Download</button>
-          <button class="btn-tr-bg" [routerLink]="['/gallery']">Back</button>
+          <button class="btn-bg" [routerLink]="['/gallery']">Back</button>
         </div>
       </div>
     </mat-card-title>
